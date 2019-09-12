@@ -62,7 +62,7 @@ def self.find_or_create_by(name:,breed:)
    else
      self.create(name:name,breed:breed)
    end
- end
+end
 
 
 end
