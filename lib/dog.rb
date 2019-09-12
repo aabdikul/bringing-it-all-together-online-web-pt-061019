@@ -39,7 +39,6 @@ end
 def self.create(hash)
   new_dog = Dog.new(hash)
   new_dog.save
-  new_dog
 end
 
 def self.new_from_db(row)
