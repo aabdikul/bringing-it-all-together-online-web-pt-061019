@@ -66,12 +66,13 @@ end
 
 def self.find_by_name(name_input)
   sql = <<-SQL
-  SELECT * FROM dogs 
+  SELECT * FROM dogs
   WHERE name = ?
   SQL
   DB[:conn].execute(sql,name_input)
+  self.new_from_db(result[0])
 end
-  
+
 
 
 end
