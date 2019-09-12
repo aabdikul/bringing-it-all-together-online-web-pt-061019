@@ -52,7 +52,7 @@ def self.find_by_id(value)
   WHERE id = ?
   SQL
   result = DB[:conn].execute(sql,value)
-  self.new_from_db(result)
+  self.new_from_db(result[0])
 end
 
 
