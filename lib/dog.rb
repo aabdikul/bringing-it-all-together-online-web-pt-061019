@@ -60,10 +60,9 @@ def self.find_or_create_by(name:,breed:)
   if !dog_array.empty?
       self.new_from_db(dog_array[0])
    else
-     song = self.create(name: name, album: album)
+     self.create(name:name,breed:breed)
    end
-   song
-  new_dog = Dog.new(name:name,breed:breed)
+ end
 
 
 end
