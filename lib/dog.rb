@@ -15,5 +15,8 @@ def self.create_table
     name TEXT,
     breed TEXT
   )
+  SQL
+  DB[:conn].execute(sql)
+end
 
 end
