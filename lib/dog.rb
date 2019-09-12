@@ -59,9 +59,9 @@ def self.find_or_create_by(name:,breed:)
   dog_array = DB[:conn].execute("SELECT * FROM dogs WHERE name = ? AND breed = ?", name, breed)
   if !dog_array.empty?
       self.new_from_db(dog_array[0])
-   else
+  else
      self.create(name:name,breed:breed)
-   end
+  end
 end
 
 
